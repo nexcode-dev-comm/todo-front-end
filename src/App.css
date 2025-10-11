@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+#checkbutton{
+  background-color: transparent;
+  border: none;
+  color: inherit; /* keeps text color from parent */
+  cursor: pointer;
+  padding: 0.5em 1em;
+}
