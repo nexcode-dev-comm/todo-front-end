@@ -7,25 +7,27 @@ export default function MyApp() {
   const [task, setTask] = useState('');
   const  [tasks, setTasks] = useState([]);
   const [clicked,setClicked] = useState([]);
-  
+  //Add function
   const handleAdd = () => {
     if (task.trim()){
       setTasks([...tasks,task]);
       setClicked([...clicked,false]);
       setTask('');
     }};
+    //Delete function
   const handleDelete = ()=> {
-   const chooesen = Array(tasks.length).fill(false);
+    <div>Cooes tasks to delete.</div>
+   const chooesen = Array(tasks.length).fill(false); //Sets to false checkbox of all tasks to chooes while deleting.
    return (
     <div>
-      clicked = chooesen ;
+      
       {tasks.map((t,index)=>
-        <li key={index}> <button onClick={() => handleCheck(index)} id="checkbutton" >  {clicked[index] ? '✅':'🔲'}</button>
+        <li key={index}> <button onClick={() => handleCheck(index)} id="checkbutton" >  {chooesen[index] ? '✅':'🔲'}</button>
         &nbsp;{t} 
         </li>)}
     </div>
    )
-  }
+  };
   const handleCheck = (index)=>{
     setClicked(clicked => {
       const updated = [...clicked];
@@ -33,6 +35,7 @@ export default function MyApp() {
       return updated;
     });
   };
+  //Shows on display
   return (
     <div>
       <h1>To do list</h1>
