@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 // App.js
 import './App.css';
+import'./index.css';
 
 
 export default function MyApp() {
@@ -31,17 +32,17 @@ export default function MyApp() {
   };
   //Shows on display
   return (
-    <div>
-      <h1>To do list</h1>
-      <input type="text" value={task} onChange={(e) => setTask(e.target.value)}  placeholder='New task' / >&nbsp;
-      <button onClick={handleAdd} >Add</button>  &nbsp;&nbsp;&nbsp;
+    <div id='div1'>
+      <h1>To do list</h1> <br />
+      <input id='input' className='Addtask' type="text" value={task} onChange={(e) => setTask(e.target.value)}  placeholder='New task' / >&nbsp;
+      <button id='Add' className='Addtask' onClick={handleAdd} >Add</button>  &nbsp;&nbsp;&nbsp;
       
       
         {tasks.map((t,index)=>
-        <li key={index}> <button onClick={() => handleCheck(index)} id="checkbutton" >  {clicked[index] ? '✅':'🔲'}</button>
+        <div id='list' key={index}> <button onClick={() => handleCheck(index)} id="checkbutton" >  {clicked[index] ? '✅':'🔲'}</button>
         &nbsp;{t}  &nbsp;
         <button onClick={() => handleDelete(index)}>🗑️</button>
-        </li>)}
+        </div>)}
      
     </div>
   );
