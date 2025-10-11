@@ -15,19 +15,13 @@ export default function MyApp() {
       setTask('');
     }};
     //Delete function
-  const handleDelete = ()=> {
-    <div>Cooes tasks to delete.</div>
-   const chooesen = Array(tasks.length).fill(false); //Sets to false checkbox of all tasks to chooes while deleting.
-   return (
-    <div>
+  const handleDelete = (index)=>{
+    const updatedTasks = tasks.filter((_,i)=> i !== index);
+    const updatedClicked = clicked.filter((_,i)=> i !== index);
+    setClicked(updatedClicked);
+    setTasks(updatedTasks);
       
-      {tasks.map((t,index)=>
-        <li key={index}> <button onClick={() => handleCheck(index)} id="checkbutton" >  {chooesen[index] ? '✅':'🔲'}</button>
-        &nbsp;{t} 
-        </li>)}
-    </div>
-   )
-  };
+   };
   const handleCheck = (index)=>{
     setClicked(clicked => {
       const updated = [...clicked];
@@ -40,11 +34,13 @@ export default function MyApp() {
     <div>
       <h1>To do list</h1>
       <input type="text" value={task} onChange={(e) => setTask(e.target.value)}  placeholder='New task' / >&nbsp;
-      <button onClick={handleAdd} >Add</button>  &nbsp;&nbsp;&nbsp;  <button onClick={handleDelete}>Delete</button>
+      <button onClick={handleAdd} >Add</button>  &nbsp;&nbsp;&nbsp;
+      
       
         {tasks.map((t,index)=>
         <li key={index}> <button onClick={() => handleCheck(index)} id="checkbutton" >  {clicked[index] ? '✅':'🔲'}</button>
-        &nbsp;{t} 
+        &nbsp;{t}  &nbsp;
+        <button onClick={() => handleDelete(index)}>🗑️</button>
         </li>)}
      
     </div>
