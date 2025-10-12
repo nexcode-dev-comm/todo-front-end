@@ -6,23 +6,27 @@
 
 
 #div1{
-  display: flex;
+  display: flexbox;
   margin-top: 5%;
   flex-direction: column;
   font-family:  'Hello Ketta';
 }
 h1{
-  align-items: center;
+  align-self: center;
 }
-.Addtask{
+.Addtasks{
     display: flex;
     flex-direction: row;
 
     
 }
 #add{
- size: auto;
+  display: flex ;
+  width: 10px;
+margin-left: 90%;
+
 }
+#deletebutton,
 #checkbutton{
   background-color: transparent;
   border: none;
@@ -30,6 +34,8 @@ h1{
   cursor: pointer;
   padding: 0.5em 1em;
 }
+#deletebutton{
+  justify-self: flex-end;
 #list{
   display: flex;
   align-items: flex-start;
