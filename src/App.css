@@ -35,7 +35,7 @@ margin-left: 90%;
   padding: 0.5em 1em;
 }
 #deletebutton{
-  justify-self: flex-end;
+  justify-self: flex-end;}
 #list{
   display: flex;
   align-items: flex-start;
