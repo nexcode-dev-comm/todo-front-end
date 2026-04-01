@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'Hello Ketta';
+  src: url('/Fonts/HelloKetta-d99oX.ttf') format('truetype');
+}
+
+
+
+#div1{
+  display: flexbox;
+  margin-top: 5%;
+  flex-direction: column;
+  font-family:  'Hello Ketta';
+}
+h1{
+  align-self: center;
+}
+.Addtasks{
+    display: flex;
+    flex-direction: row;
+
+    
+}
+#add{
+  display: flex ;
+  width: 10px;
+margin-left: 90%;
+
+}
+#deletebutton,
+#checkbutton{
+  background-color: transparent;
+  border: none;
+  color: inherit; /* keeps text color from parent */
+  cursor: pointer;
+  padding: 0.5em 1em;
+}
+#deletebutton{
+  justify-self: flex-end;}
+#list{
+  display: flex;
+  align-items: flex-start;
+
+}

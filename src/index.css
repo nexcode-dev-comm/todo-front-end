@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Hello Ketta';
+  src: url('/Fonts/HelloKetta-d99oX.ttf') format('truetype');
+}
+
+
+body {
+  display: flex;
+  justify-content: center;
+  -ms-flex-align: start;
+  margin: 0;
+  font-family:  'Hello Ketta';
+  font-size: xx-large;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ background-image: url('./background.png');
+ background-size: cover;
+ background-position: center;  /* centers the image */
+  background-repeat: no-repeat; /* prevents tiling */
+  height: 100vh;                /* ensures body fills the viewport */
+  margin: 0;
+ 
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
